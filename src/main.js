@@ -1,11 +1,10 @@
-import $ from 'jquery';
-import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles.css';
+// import $ from 'jquery';
+// import 'bootstrap';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import './styles.css';
+// import Sortable from 'sortablejs';
 
-$(document).ready(function () {
-  // $('#submit-button').submit(function (event) {
-  //     event.preventDefault();
-
-  // });
-});
+// new Sortable(sortablelist, {
+//   animation: 150,
+//   ghostClass: 'sortable-ghost'
+// });

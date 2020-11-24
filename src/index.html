@@ -2,29 +2,49 @@
 <html>
 
 <head>
-  <title>Project Name</title>
+  <title>DragNSwapUI</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://raw.githack.com/SortableJS/Sortable/master/Sortable.js"></script>
 </head>
 
 <body>
-  <!-- Some sort of HTML that directly correlates with your main.js -->
+  <!-- <script src='main.js' /> -->
+  <script>
+    new Sortable(sortablelist, {
+        animation: 150,
+        ghostClass: 'sortable-ghost'
+      });
+    
+  </script>
 
-  <!-- Some sort of HTML that directly correlates with your main.js -->
-
-  <!-- Uncomment the following code to check that bootstrap is working! -->
-
-  <!-- <div class="card">
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top"
-        src="https://images.unsplash.com/photo-1534278931827-8a259344abe7?ixlib=rb-1.2.1&w=1000&q=80"
-        alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This should be a working card class!
-        </p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-xl-10 order-2 order-sm-1 mt-3">
+        <h2 class="h6"><strong>Sortable List</strong></h2>
+        <div id="sortablelist" class="list-group mb-4 mt-3" data-id="1">
+          <div class="list-group-item d-flex align-items-center justify-content-between" data-id="2">
+            <div>
+              <p class="mb-0 d-inline-flex align-items-center">
+                List Item 1</p>
+            </div>
+          </div>
+          <div class="list-group-item d-flex align-items-center justify-content-between" data-id="3">
+            <div>
+              <p class="mb-0 d-inline-flex align-items-center">
+                List Item 2</p>
+            </div>
+          </div>
+          <div class="list-group-item d-flex align-items-center justify-content-between" data-id="4">
+            <div>
+              <p class="mb-0 d-inline-flex align-items-center">
+                List Item 3</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div> -->
+  </div>
+
 </body>
 
 </html>

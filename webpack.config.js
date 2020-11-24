@@ -19,7 +19,7 @@ module.exports = {
     new UglifyJsPlugin({ sourceMap: true }),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'project-name',
+      title: 'drag-n-swapUI',
       template: './src/index.html',
       inject: 'body'
     })

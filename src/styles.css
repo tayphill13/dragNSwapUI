@@ -1,1 +1,10 @@
 /* Some CSS! */
+
+.list-group .list-group-item {
+  border-radius: 0;
+  cursor: move;
+}
+
+.list-group .list-group-item:hover {
+  background-color: #f7f7f7;
+}
