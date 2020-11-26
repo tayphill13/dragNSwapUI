@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DRAG_AND_DROP</title>
+  <style>
+    body {
+      background-color: aquamarine;
+    }
+
+    .whiteBox {
+      height: 250px;
+      width: 250px;
+      background-color: rgb(55, 238, 245);
+      margin: 10px;
+      display: inline-block;
+      border: 2px solid red;
+    }
+
+    .imgBox {
+
+      display: flex;
+      background-image: url("image.jpg");
+      height: 230px;
+      width: 230px;
+      position: relative;
+      top: 10px;
+      margin: 0 auto;
+      cursor: pointer;
+
+    }
+
+    .imgBox1 {
+
+      display: flex;
+      background-image: url("image.jpg");
+      height: 230px;
+      width: 230px;
+      position: relative;
+      top: 10px;
+      margin: 0 auto;
+      cursor: pointer;
+
+    }
+
+    .hold {
+      border: 2px dashed rgb(118, 182, 0);
+    }
+
+    .hide {
+      display: none;
+    }
+
+    .dragenter {
+      background: rgb(221, 115, 96);
+      border-color: green;
+      border-style: groove;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="whiteBox">
+    <div class="imgBox" draggable="true"></div>
+  </div>
+  <div class="whiteBox"></div>
+  <div class="whiteBox"></div>
+  <div class="whiteBox"></div>
+  <script>
+    console.log("D&D");
+
+    let imgBox = document.querySelector(".imgBox");
+    let whiteBoxes = document.querySelectorAll(".whiteBox");
+
+    imgBox.addEventListener("dragstart", (e) => {
+      console.log("DRAG STARTED");
+      e.target.className += " hold";
+      setTimeout(() => {
+        e.target.className += " hide";
+      }, 0);
+    });
+    imgBox.addEventListener("dragend", (e) => {
+      console.log("DRAG ENDED");
+      e.target.className = "imgBox";
+    });
+
+    for (whiteBox of whiteBoxes) {
+      whiteBox.addEventListener("dragover", (e) => {
+        e.preventDefault();
+        // console.log("gj")
+      });
+      whiteBox.addEventListener("dragenter", (e) => {
+        e.target.className += " dragenter";
+      });
+      whiteBox.addEventListener("dragleave", (e) => {
+        e.target.className = "whiteBox";
+      });
+      whiteBox.addEventListener("drop", (e) => {
+        let answer = confirm("Do you really want to move it")
+        console.log(answer)
+        if (answer) {
+          e.target.append(imgBox)
+        }
+        else {
+          e.target.className = "whiteBox";
+
+        }
+      });
+    }
+
+  </script>
+</body>
+
+</html>

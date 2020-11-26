@@ -8,3 +8,34 @@
 .list-group .list-group-item:hover {
   background-color: #f7f7f7;
 }
+
+body {
+  background-color: aquamarine;
+}
+/* 
+.playlist {
+  height: 250px;
+  width: 250px;
+  background-color: rgb(55, 238, 245);
+  margin: 10px;a
+  display: inline-block;
+  border: 2px solid red;
+}
+
+.output {
+  top: 10px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.hold {
+  border: 2px dashed rgb(118, 182, 0);
+}
+
+.hide {
+  display: none;
+}
+
+.dragenter {
+  color: red;
+} */
