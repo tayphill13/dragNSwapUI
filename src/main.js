@@ -10,7 +10,6 @@ if (document.readyState === 'complete' || (document.readyState !== 'loading' && 
   document.addEventListener('DOMContentLoaded', fullVideoGallery);
 }
 
-
 function fullVideoGallery() {
   let resp;
   let status;
